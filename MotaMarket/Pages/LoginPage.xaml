@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MotaMarket.Pages.LoginPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="15"
+                     Margin="25">
+            <Grid Margin="0,0,0,60">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="30" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.Column="0"
+                             Aspect="AspectFit"
+                             BackgroundColor="Transparent"
+                             Source="backArrow.png"
+                             x:Name="BtnBack"
+                             Clicked="BtnBack_Clicked"/>
+
+                <Label Grid.Column="1"
+                       TextColor="#303F9F"
+                       Text="Mota Market"
+                       FontSize="Large" FontAttributes="Bold"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="30" />
+            </Grid>
+
+            <Label TextColor="#80574D"
+                       Text="Access your Account"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       Margin="30" />
+            <Frame HasShadow="True"
+                       Padding="25"
+                       Margin="0,30,0,0">
+                <StackLayout>
+
+
+                    <Entry Placeholder="Email"
+                   PlaceholderColor="#80574D"
+                   TextColor="#303F9F"
+                   x:Name="EntEmail"
+                   Keyboard="Email" />
+                    <Entry Placeholder="Password"
+                   PlaceholderColor="#80574D"
+                   TextColor="#303F9F"
+                   IsPassword="True"
+                   x:Name="EntPassword"
+                   Keyboard="Default" />
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Login"
+                    BackgroundColor="#666AD1"
+                    TextColor="White"
+                    x:Name="BtnLogin"
+                    Clicked="BtnLogin_Clicked"/>
+
+            <Label HorizontalOptions="Center"
+                       VerticalOptions="End"
+                       Text="Forgot Password?"
+                       TextColor="#80574D"
+                       FontSize="Medium">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="TapChangePassword" Tapped="TapChangePassword_Tapped" />
+                </Label.GestureRecognizers>
+
+            </Label>
+
+
+            <Label Margin="0,0,80,20"
+                               FontSize="Small"
+                               HorizontalTextAlignment="Center"
+                               TextColor="#303F9F"
+                               Text="Developer: EricTCarter" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
